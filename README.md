@@ -18,7 +18,7 @@ Image should be saved to upload folder
 
 
 <br>
-<h2>Optimal part</h>
+<h2>Optimal part</h2>
 Add file extension checks
 Add function that returns uploaded image http://localhost:5000/upload/<image_name>.png
 Show user’s avatar in cabinet (you can store link to the file in cookie or database)
