@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %} 
+<body style="background-color:powderblue;">
+<center><h1> Welcome to User Register page </h1> </center> <br>
+<center><div class="cons">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form method=POST action="{{ url_for('register') }}">
+                <div class="form_G">
+                    <label for="exampleInputEmail1"><b>Please choose Username</label>
+                    <input type="text" class="form_user" name="username" newa="Username">
+                </div>
+				<br>
+                <div class="form_G">
+                    <label for="exampleInputPassword1"><b>Please choose Password</label>
+                    <input type="password" class="form_user" name="pass" newa="Password">
+					<br>
+                </div><br><br>
+                <button type="submit" class="btn btn-primary btn-block">Click Signup</button>
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}

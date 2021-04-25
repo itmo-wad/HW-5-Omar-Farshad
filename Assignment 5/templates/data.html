@@ -1,0 +1,32 @@
+<!doctype html>
+<title>Welcome To upload data page</title>
+
+<body style="background-color:powderblue;">
+<center><h2>Please Upload your File Here</h2> <br
+	
+<p>
+	{% with messages = get_flashed_messages() %}
+	  {% if messages %}
+		<ul>
+		{% for message in messages %}
+		  <li>{{ message }}</li>
+		{% endfor %}
+		</ul>
+	  {% endif %}
+	{% endwith %}
+</p>
+{% if filename %}
+	<center><div>
+		<img src="{{ url_for('display_image', filename=filename) }}">
+	</div>
+{% endif %}
+<form method="post" action="/cabinet" enctype="multipart/form-data">
+    <dl>
+		<p>
+			<input type="file" name="file" autocomplete="off" required> 
+			<input type="submit" value="Submit">
+		</p>
+    </dl>
+ 
+</form>
+</body>
